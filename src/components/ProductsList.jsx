@@ -1,6 +1,6 @@
-"use client";
 import ProductCard from "./ProductCard";
 import { products } from "../lib/products";
+import Link from "next/link";
 
 export default function ProductsList() {
   return (
@@ -14,10 +14,11 @@ export default function ProductsList() {
         </p>
       </div>
 
-      {/* کانتینر grid با margin auto */}
       <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {products.map((p, i) => (
-          <ProductCard key={p.id} product={p} index={i} />
+          <Link key={p.id} href={`/shop/${p.category}`}>
+            <ProductCard product={p} index={i} />
+          </Link>
         ))}
       </div>
     </section>

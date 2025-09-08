@@ -1,26 +1,32 @@
+// src/lib/products.js
+
 export const products = [
   {
     id: 1,
     name: "دخترانه",
-    description: "بهترین لباس‌های دخترانه با کیفیت بالا",
-    image: "/imgs/product/product-img-1.webp",
+    category: "girl",
+    description: "بهترین لباس‌های دخترانه",
+    image: "/imgs/products/girl/1/girl-1.jpg",
   },
   {
     id: 2,
     name: "پسرانه",
-    description: "لباس‌های شیک و راحت برای پسران",
-    image: "/imgs/product/product-img-2.webp",
+    category: "boy",
+    description: "لباس‌های شیک پسرانه",
+    image: "/imgs/products/boy/1/boy-1.jpg",
   },
   {
     id: 3,
-    name: "پاییزه",
-    description: "کالکشن پاییزه با رنگ‌های ملایم و شیک",
-    image: "/imgs/product/product-img-3.webp",
+    name: "بهاره",
+    category: "spring",
+    description: "لباس‌های شاد بهاره",
+    image: "/imgs/products/spring/1/spring-1.jpg",
   },
   {
     id: 4,
-    name: "بهاره",
-    description: "لباس‌های بهاری با طراحی مدرن و شاد",
-    image: "/imgs/product/product-img-4.webp",
+    name: "پاییزه",
+    category: "autumn",
+    description: "کالکشن پاییزه",
+    image: "/imgs/products/autumn/1/autumn-1.jpg",
   },
 ];
