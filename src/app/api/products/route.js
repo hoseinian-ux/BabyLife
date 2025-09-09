@@ -1,12 +1,5 @@
 import { NextResponse } from "next/server";
-
-const allProducts = [
-  { id: 1, name: "لباس دخترانه", category: "girl", image: "/images/girl1.jpg", description: "محصول عالی" },
-  { id: 2, name: "لباس پسرانه", category: "boy", image: "/images/boy1.jpg", description: "محصول عالی" },
-  { id: 3, name: "کت پاییزه", category: "fall", image: "/images/fall1.jpg", description: "محصول عالی" },
-  { id: 4, name: "تیشرت بهاره", category: "spring", image: "/images/spring1.jpg", description: "محصول عالی" },
-  
-];
+import { allProducts } from "@/lib/fakeProducts";
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
@@ -28,4 +21,32 @@ export async function GET(req) {
     data: paginated,
     totalPages: Math.ceil(filtered.length / pageSize),
   });
+}
+
+
+export async function POST(req) {
+  try {
+    const body = await req.json();
+
+    // ساخت محصول جدید با id یکتا
+    const newProduct = {
+      id: Date.now().toString(),
+      name: body.name,
+      category: body.category,
+      description: body.description || "",
+      price: body.price || 0,
+      colors: body.colors || [],
+      sizes: body.sizes || [],
+      ageRange: body.ageRange || "",
+      images: body.images || [],
+      gallery: body.gallery || [],
+    };
+
+    const updated = [...products, newProduct];
+    setProducts(updated);
+
+    return NextResponse.json(newProduct, { status: 201 });
+  } catch (error) {
+    return NextResponse.json({ error: "Invalid data" }, { status: 400 });
+  }
 }

@@ -30,10 +30,25 @@ export default function Header() {
 
           {/* Desktop login */}
           <div className="hidden md:flex items-center gap-3">
-            <button className="font-semibold">ورود</button>
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+          <Link href="/login">
+    <span className="font-semibold flex items-center gap-1">
+      ورود
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M5 12h14M12 5l7 7-7 7"
+        />
+      </svg>
+    </span>
+  </Link>
           </div>
 
           {/* Mobile row */}
@@ -70,7 +85,9 @@ export default function Header() {
                 <Link key={item.name} href={item.href} className="font-semibold">{item.name}</Link>
               ))}
               <div className="pt-2 border-t border-white/20">
-                <button className="font-semibold">ورود</button>
+                <Link href="/login">
+    <span className="font-semibold">ورود</span>
+  </Link>
               </div>
             </div>
           </div>

@@ -1,33 +1,5 @@
 import { NextResponse } from "next/server";
-
-// دیتای فیک — می‌تونی بعدا از DB بیاری
-const allProducts = [
-  {
-    id: "1",
-    name: "لباس دخترانه",
-    category: "girl",
-    description: "لباس دخترانه شیک و باکیفیت",
-    price: 250000,
-    images: ["/images/girl1.jpg", "/images/girl2.jpg"],
-    colors: ["#ff0000", "#00ff00", "#0000ff"],
-    sizes: ["S", "M", "L", "XL"],
-    reviews: [
-      { user: "زهرا", comment: "خیلی عالی بود 👌" },
-      { user: "نگین", comment: "جنس خوب، ارسال سریع" },
-    ],
-  },
-  {
-    id: "2",
-    name: "لباس پسرانه",
-    category: "boy",
-    description: "لباس راحت و شیک برای پسران",
-    price: 200000,
-    images: ["/images/boy1.jpg", "/images/boy2.jpg"],
-    colors: ["#000", "#555"],
-    sizes: ["M", "L"],
-    reviews: [],
-  },
-];
+import { allProducts } from "@/lib/fakeProducts";
 
 export async function GET(req, { params }) {
   const { id } = params;
@@ -38,4 +10,39 @@ export async function GET(req, { params }) {
   }
 
   return NextResponse.json(product);
+}
+
+export async function PUT(req, { params }) {
+  try {
+    const body = await req.json();
+    const idx = products.findIndex((p) => p.id == params.id);
+
+    if (idx === -1) {
+      return NextResponse.json({ error: "Product not found" }, { status: 404 });
+    }
+
+    const updatedProduct = { ...products[idx], ...body };
+    const updatedList = [...products];
+    updatedList[idx] = updatedProduct;
+
+    setProducts(updatedList);
+
+    return NextResponse.json(updatedProduct, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ error: "Invalid data" }, { status: 400 });
+  }
+}
+
+//  حذف محصول
+export async function DELETE(req, { params }) {
+  const exists = products.some((p) => p.id == params.id);
+
+  if (!exists) {
+    return NextResponse.json({ error: "Product not found" }, { status: 404 });
+  }
+
+  const updatedList = products.filter((p) => p.id != params.id);
+  setProducts(updatedList);
+
+  return NextResponse.json({ message: "Deleted successfully" }, { status: 200 });
 }
