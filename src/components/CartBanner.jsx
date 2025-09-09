@@ -44,7 +44,7 @@ export default function CartBanner() {
 
       {/* لایه محتوای وسط */}
       <div className="relative z-10 rounded-xl p-6 md:p-10 max-w-xl text-center flex flex-col items-center ">
-        <span className="text-[#f97316] text-lg md:text-2xl font-bold mb-2 transition-all duration-300">
+        <span className="text-secondary text-lg md:text-2xl font-bold mb-2 transition-all duration-300">
           {discount} {discountText}
         </span>
         <h3 className="text-2xl md:text-4xl font-bold mb-2 transition-all duration-300">
@@ -61,7 +61,7 @@ export default function CartBanner() {
 
         <a
           href={cartLink}
-          className="mt-4 bg-[#9eaa92] text-white px-6 py-3 rounded-md hover:opacity-90 transition"
+          className="mt-4 text-secondary text-white px-6 py-3 rounded-md hover:opacity-90 transition"
         >
           افزودن به سبد خرید
         </a>

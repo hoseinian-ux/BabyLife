@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { categories } from "@/lib/categories";
+import Link from "next/link";
 
 export default function MegaMenu({ isMobile }) {
   const [openSubMenu, setOpenSubMenu] = useState(null);
@@ -23,9 +24,13 @@ export default function MegaMenu({ isMobile }) {
             {openSubMenu === idx && cat.subcategories?.length > 0 && (
               <div className="flex flex-col pl-4 mt-1 gap-1">
                 {cat.subcategories.map((sub) => (
-                  <a key={sub} href="#" className="py-1 text-sm hover:text-[#9eaa92]">
-                    {sub}
-                  </a>
+                <Link
+        key={sub}
+        href={`/shop/${sub.toLowerCase()}`} 
+        className="py-1 text-sm hover:text-primary"
+      >
+        {sub}
+      </Link>
                 ))}
               </div>
             )}
@@ -44,12 +49,12 @@ export default function MegaMenu({ isMobile }) {
           <span className="font-semibold mt-1">{cat.name}</span>
 
           {cat.subcategories?.length > 0 && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-44 bg-white border border-[#9eaa92]/40 rounded-md shadow-sm opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all z-50">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-44 bg-white border border-primary/40 rounded-md shadow-sm opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all z-50">
               {cat.subcategories.map((sub) => (
                 <a
                   key={sub}
                   href="#"
-                  className="block px-4 py-2 hover:bg-[#f6fbf2] hover:text-[#6b8e5e]"
+                  className="block px-4 py-2 hover:bg-accent hover:text-primary"
                 >
                   {sub}
                 </a>

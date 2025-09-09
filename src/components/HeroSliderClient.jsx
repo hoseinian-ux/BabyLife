@@ -39,7 +39,7 @@ export default function HeroSliderClient() {
               <p className="text-sm md:text-base text-gray-700 mb-4">{slide.subtitle}</p>
               <a
                 href={slide.ctaHref}
-                className="inline-block bg-[#9eaa92] text-white px-5 py-2 rounded-md hover:opacity-90 transition"
+                className="inline-block bg-primary text-white px-5 py-2 rounded-md hover:opacity-90 transition"
               >
                 {slide.ctaText}
               </a>

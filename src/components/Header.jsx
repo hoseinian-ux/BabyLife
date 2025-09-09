@@ -8,21 +8,21 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const mainMenu = [
-    { name: "خانه", href: "#" },
-    { name: "محصولات", href: "#" },
-    { name: "درباره ما", href: "#" },
-    { name: "ارتباط با ما", href: "#" },
+    { name: "خانه", href: "/" },
+    { name: "محصولات", href: "/shop" },
+    { name: "درباره ما", href: "/about" },
+    { name: "ارتباط با ما", href: "/contact" },
   ];
 
   return (
     <header className="w-full" dir="rtl">
       {/* TOP BAR (green full width) */}
-      <div className="w-full bg-[#9eaa92] text-white">
-        <div className="max-w-[1300px] mx-auto px-4 flex items-center justify-between py-2">
+      <div className="w-full bg-primary text-white">
+  <div className="max-w-[1300px] mx-auto px-4 flex items-center justify-between py-2">
           {/* Desktop: main nav */}
           <nav className="hidden md:flex items-center gap-6">
             {mainMenu.map((item) => (
-              <Link key={item.name} href={item.href} className="font-semibold hover:text-[#e1d0b4] px-4 py-2">
+              <Link key={item.name} href={item.href} className="font-semibold hover:text-secondary px-4 py-2">
                 {item.name}
               </Link>
             ))}
@@ -51,7 +51,7 @@ export default function Header() {
               </button>
             </div>
 
-            <Image src="/imgs/logo.svg" alt="logo" width={96} height={32} className="h-8 w-auto" />
+            <Image src="/imgs/logo.jfif" alt="logo" width={120} height={50} className="h-10 w-auto" />
 
             <button aria-label="menu" onClick={() => setMobileOpen((v) => !v)} className="p-1">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-[#807b4d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,7 +63,7 @@ export default function Header() {
 
         {/* Mobile menu panel */}
         {mobileOpen && (
-          <div className="md:hidden bg-[#9eaa92]">
+          <div className="md:hidden bg-primary">
             <div className="max-w-[1300px] mx-auto px-4 py-3 flex flex-col gap-3">
               <MegaMenu isMobile />
               {mainMenu.map((item) => (
@@ -93,13 +93,13 @@ export default function Header() {
 
             {/* center: logo */}
             <div className="justify-center hidden md:flex">
-              <Image src="/imgs/logo.svg" alt="logo" width={120} height={40} className="h-12 w-auto" />
+              <Image src="/imgs/logo.jfif" alt="logo" width={170} height={50} className="h-12 w-auto" />
             </div>
 
             {/* left: cart (desktop) */}
             <div className="flex justify-end md:justify-end">
               <button className="hidden md:inline-flex items-center p-1" aria-label="cart">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#9eaa92]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 9h12l-2-9" />
                 </svg>
               </button>

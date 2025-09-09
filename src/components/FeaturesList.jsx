@@ -16,7 +16,7 @@ export default function FeaturesList() {
               >
                 <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#f5f5f5]">
                   {IconComponent && (
-                    <IconComponent className="text-3xl text-[#9eaa92]" />
+                    <IconComponent className="text-3xl text-primary" />
                   )}
                 </div>
                 <div>

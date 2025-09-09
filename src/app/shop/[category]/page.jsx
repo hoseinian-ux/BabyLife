@@ -14,7 +14,13 @@ export default async function CategoryPage({ params, searchParams }) {
   return (
     <div>
       {/* Breadcrumb */}
-      <Breadcrumb category={category} />
+    <Breadcrumb
+  items={[
+    { label: "خانه", href: "/" },
+    { label: category, href: `/shop/${category}` },
+  ]}
+/>
+
 
       <div className="container mx-auto px-4 py-10">
         <ProductsTabs active={category} />
@@ -46,7 +52,7 @@ export default async function CategoryPage({ params, searchParams }) {
               href={`/shop/${category}?page=${i + 1}`}
               className={`px-3 py-1 rounded ${
                 page === i + 1
-                  ? "bg-[#9eaa92] text-white"
+                  ? "bg-primary text-white"
                   : "bg-gray-200 hover:bg-gray-300"
               }`}
             >

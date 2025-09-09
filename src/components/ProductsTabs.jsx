@@ -18,7 +18,7 @@ export default function ProductsTabs({ active }) {
           href={`/shop/${cat.key}`}
           className={`px-4 py-2 rounded-md ${
             active === cat.key
-              ? "bg-[#9eaa92] text-white"
+              ? "bg-primary text-white"
               : "bg-gray-200 hover:bg-gray-300"
           }`}
         >

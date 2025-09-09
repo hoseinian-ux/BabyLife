@@ -17,7 +17,7 @@ export default function BlogCard({ post }) {
 
       {/* محتوای سمت راست */}
       <div className="flex-1 flex flex-col justify-between">
-        <h3 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2 group-hover:text-[#9eaa92] transition">
+        <h3 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2 group-hover:text-primary transition">
           {post.title}
         </h3>
         <p className="text-gray-600 text-sm mb-3 line-clamp-2">
@@ -25,9 +25,9 @@ export default function BlogCard({ post }) {
         </p>
         <Link
           href={`/blog/${post.id}`}
-          className="inline-block text-[#9eaa92] font-semibold relative transition duration-300
+          className="inline-block text-primary font-semibold relative transition duration-300
                      after:content-[''] after:absolute after:left-0 after:-bottom-1 
-                     after:w-0 after:h-[2px] after:bg-[#9eaa92] after:transition-all after:duration-300
+                     after:w-0 after:h-[2px] after:bg-primaryafter:transition-all after:duration-300
                      hover:after:w-full"
         >
           بیشتر بخوانید →

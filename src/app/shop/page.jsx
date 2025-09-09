@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import ProductsTabs from "../../components/ProductsTabs";
 import ProductCard from "../../components/ProductCard";
-import { products } from "../../lib/product"; // <-- حتما products
+import { products } from "../../lib/product"; 
 
 export default function ShopPage() {
   const searchParams = useSearchParams();

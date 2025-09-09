@@ -34,7 +34,7 @@ export default function BlogList() {
         <div className="text-center mt-6">
           <Link
             href="/blog"
-            className="px-6 py-3 bg-[#9eaa92] text-white rounded-md hover:opacity-90 transition"
+            className="px-6 py-3 bg-primary text-white rounded-md hover:opacity-90 transition"
           >
             موارد بیشتر
           </Link>

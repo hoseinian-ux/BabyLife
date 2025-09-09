@@ -29,7 +29,7 @@ export default function Footer() {
 
       <div className="container mx-auto py-12 text-white lg:pr-10">
         {/* لوگو، ایمیل، شبکه اجتماعی */}
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between border-b border-yellow-400/50 pb-6 mb-6 gap-6">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between border-b border-secondary/50 pb-6 mb-6 gap-6">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <h1 className="text-3xl text-primary font-bold mb-1">{logo.title}</h1>
             <p className="text-gray-300 mb-0">{logo.subtitle}</p>
@@ -108,7 +108,7 @@ export default function Footer() {
             <p className="text-gray-300 mb-3">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک
             </p>
-            <a href="#" className="inline-block px-4 py-2 border border-yellow-400 rounded-full text-yellow-400">
+            <a href="#" className="inline-block px-4 py-2 border border-secondary rounded-full text-secondary">
              بیشتر بدانید
             </a>
           </div>

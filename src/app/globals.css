@@ -25,6 +25,21 @@
 
 :root {
   --font-vazirmatn: "Vazirmatn", sans-serif;
+  /* رنگ‌های برند */
+  --color-primary: #9eaa92;   /* سبز برند */
+  --color-secondary: #d4af37; /* طلایی لوگو */
+  --color-accent: #00bfff;    /* آبی روشن */
+  --color-accent-pink: #ffb6c1; /* صورتی ملایم */
+
+  /* رنگ‌های خنثی */
+  --color-white: #ffffff;
+  --color-black: #333333;
+  --color-gray-light: #f5f5f5;
+  --color-gray-dark: #666666;
+
+  /* رنگ‌های کمکی */
+  --color-mint: #98ff98;
+  --color-yellow: #ffd966;
 }
 
 body {
