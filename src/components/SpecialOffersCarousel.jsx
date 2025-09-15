@@ -35,11 +35,14 @@ export default function SpecialOffersCarousel() {
                 <div className="absolute top-0 left-0 bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-br-xl z-10">
                   {product.discount}
                 </div>
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-56 object-cover"
-                />
+                <div className="w-full aspect-[4/3] bg-gray-100 relative overflow-hidden">
+  <img
+    src={product.image}
+    alt={product.name}
+    className="w-full h-full object-contain"
+  />
+</div>
+
                 <div className="p-4 text-center">
                   <h3 className="text-lg font-semibold">{product.name}</h3>
                 </div>

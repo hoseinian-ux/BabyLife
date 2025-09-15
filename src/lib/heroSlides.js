@@ -5,7 +5,7 @@ export const heroSlides = [
     subtitle: "جدیدترین‌ها با بهترین قیمت",
     ctaText: "مشاهده محصولات",
     ctaHref: "#",
-    bg: "/imgs/slider/slide1.jpg",
+    bg: "/imgs/slider/slide5.jpg",
     deco: [
       {
         src: "/imgs/slider/balloon.png",
@@ -25,7 +25,47 @@ export const heroSlides = [
     subtitle: "فصل جدید، استایل جدید",
     ctaText: "مشاهده محصولات",
     ctaHref: "#",
-    bg: "/imgs/slider/slide1.jpg",
+    bg: "/imgs/slider/slide3.jpg",
+    deco: [
+      {
+        src: "/imgs/slider/balloon.png",
+        className: "absolute top-8 right-6 w-16 h-auto md:w-20",
+        anim: "animate-bounce-slow",
+      },
+      {
+        src: "/imgs/slider/star.png",
+        className: "absolute top-12 left-8 w-8 h-auto md:w-10",
+        anim: "animate-bounce",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "لباس کودک",
+    subtitle: "فصل جدید، استایل جدید",
+    ctaText: "مشاهده محصولات",
+    ctaHref: "#",
+    bg: "/imgs/slider/slide4.jpg",
+    deco: [
+      {
+        src: "/imgs/slider/balloon.png",
+        className: "absolute top-8 right-6 w-16 h-auto md:w-20",
+        anim: "animate-bounce-slow",
+      },
+      {
+        src: "/imgs/slider/star.png",
+        className: "absolute top-12 left-8 w-8 h-auto md:w-10",
+        anim: "animate-bounce",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "لباس کودک",
+    subtitle: "فصل جدید، استایل جدید",
+    ctaText: "مشاهده محصولات",
+    ctaHref: "#",
+    bg: "/imgs/slider/slide2.jpg",
     deco: [
       {
         src: "/imgs/slider/balloon.png",

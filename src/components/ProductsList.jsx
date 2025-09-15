@@ -7,7 +7,7 @@ export default function ProductsList() {
     <section className="product-section mt-16 mb-16 px-4">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h3 className="text-3xl font-bold mb-2">
-          <span className="text-accent">محصولات</span>
+          <span className="text-secondary">محصولات</span>
         </h3>
         <p className="text-gray-600 max-w-xl mx-auto">
           بهترین محصولات با کیفیت بالا برای شما انتخاب شده‌اند.

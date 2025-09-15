@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { categories } from "@/lib/categories";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MegaMenu({ isMobile }) {
   const [openSubMenu, setOpenSubMenu] = useState(null);
@@ -15,7 +16,16 @@ export default function MegaMenu({ isMobile }) {
               className="flex justify-between items-center font-semibold py-2 border-b"
               onClick={() => setOpenSubMenu(openSubMenu === idx ? null : idx)}
             >
-              <span>{cat.icon} {cat.name}</span>
+             <div className="flex items-center gap-2">
+                <Image
+                  src={cat.icon}
+                  alt={cat.name}
+                  width={30}
+                  height={30}
+                  className="object-contain"
+                />
+                <span>{cat.name}</span>
+              </div>
               {cat.subcategories?.length > 0 && (
                 <span>{openSubMenu === idx ? "▲" : "▼"}</span>
               )}
@@ -45,8 +55,15 @@ export default function MegaMenu({ isMobile }) {
     <div className="hidden md:flex justify-center gap-12 pt-12">
       {categories.map((cat) => (
         <div key={cat.name} className="relative group flex flex-col items-center">
-          <span className="text-2xl transition-transform group-hover:-translate-y-1 duration-300">{cat.icon}</span>
+           <Image
+            src={cat.icon}
+            alt={cat.name}
+            width={50}
+            height={50}
+            className="mb-2 object-contain transition-transform group-hover:-translate-y-1 duration-300"
+          />
           <span className="font-semibold mt-1">{cat.name}</span>
+
 
           {cat.subcategories?.length > 0 && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-44 bg-white border border-primary/40 rounded-md shadow-sm opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all z-50">

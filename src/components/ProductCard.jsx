@@ -1,39 +1,30 @@
 "use client";
 import { motion } from "framer-motion";
 
-const gradients = [
-  "from-yellow-100 to-yellow-200",
-  "from-blue-100 to-blue-200",
-  "from-green-100 to-green-200",
-  "from-pink-100 to-pink-200",
-];
-
-export default function ProductCard({ product, index }) {
-  const bgGradient = gradients[index % gradients.length];
-
+export default function ProductCard({ product }) {
   return (
-    <motion.div
-      className="relative w-full h-[400px] transform-style-preserve-3d rounded-xl shadow-lg cursor-pointer"
-      initial={{ rotateY: 0 }}
-      whileHover={{ rotateY: 180 }}
-      transition={{ duration: 0.7 }}
-    >
-      {/* Front */}
-      <div className="absolute w-full h-full backface-hidden rounded-xl overflow-hidden flex items-center justify-center">
-        <img
-          src={product.image}
-          alt={product.name}
-          className="absolute inset-0 w-full h-full object-cover rounded-xl"
-        />
+    <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg cursor-pointer group">
+      {/* تصویر */}
+      <img
+        src={product.image}
+        alt={product.name}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+
+      {/* لایه بلور روی هاور */}
+      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center px-4 text-center">
+        <p className="text-white text-sm">{product.description}</p>
       </div>
 
-      {/* Back */}
-      <div
-        className={`absolute w-full h-full backface-hidden rotate-y-180 flex flex-col items-center justify-center rounded-xl bg-gradient-to-br ${bgGradient}`}
-      >
-        <h3 className="text-3xl font-bold text-gray-800">{product.name}</h3>
-        <p className="text-gray-600 mt-2">{product.description}</p>
-      </div>
-    </motion.div>
+      {/* عنوان ثابت روی عکس */}
+<div className="absolute bottom-4 left-0 w-full">
+  <div className="backdrop-blur-sm bg-white/40 border-y border-white/50 py-2">
+    <h3 className="text-center text-lg font-bold text-secondary drop-shadow-md">
+      {product.name}
+    </h3>
+  </div>
+</div>
+
+    </div>
   );
 }
