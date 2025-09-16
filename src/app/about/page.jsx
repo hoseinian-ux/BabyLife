@@ -5,9 +5,28 @@ import AnimatedItem from "@/components/AnimatedItem";
 import BreadcrumbSimple from "@/components/BreadcrumbSimple";
 
 export const metadata = {
-  title: "درباره ما | فروشگاه لباس کودک",
-  description: "معرفی فروشگاه، خدمات و مزایای خرید از ما",
+  title: "درباره ما - فروشگاه BabyLife",
+  description: "درباره فروشگاه BabyLife و محصولات نوزادی ما",
+  keywords: "درباره ما, BabyLife, فروشگاه نوزاد",
+  robots: "index, follow",
+  canonical: "https://www.BabyLife.com/about",
+  openGraph: {
+    title: "درباره ما - فروشگاه BabyLife",
+    description: "درباره فروشگاه BabyLife و محصولات نوزادی ما",
+    url: "https://www.BabyLife.com/about",
+    images: [
+      { url: "https://www.BabyLife.com/about-og.jpg", width: 1200, height: 630 },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "درباره ما - فروشگاه BabyLife",
+    description: "درباره فروشگاه BabyLife و محصولات نوزادی ما",
+    image: "https://www.BabyLife.com/about-og.jpg",
+  },
 };
+
 
 const features = [
   {

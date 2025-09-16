@@ -32,7 +32,7 @@ export default function MegaMenu({ isMobile }) {
             </button>
 
             {openSubMenu === idx && cat.subcategories?.length > 0 && (
-              <div className="flex flex-col pl-4 mt-1 gap-1">
+              <div className="flex flex-col pl-4 gap-1">
                 {cat.subcategories.map((sub) => (
                 <Link
         key={sub}
@@ -66,7 +66,7 @@ export default function MegaMenu({ isMobile }) {
 
 
           {cat.subcategories?.length > 0 && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-44 bg-white border border-primary/40 rounded-md shadow-sm opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all z-50">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 w-44 bg-white border border-primary/40 rounded-md shadow-sm opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all z-50">
               {cat.subcategories.map((sub) => (
                 <a
                   key={sub}
