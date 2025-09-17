@@ -7,16 +7,10 @@ export const heroSlides = [
     ctaHref: "#",
     bg: "/imgs/slider/slide5.jpg",
     deco: [
-      {
-        src: "/imgs/slider/balloon.png",
-        className: "absolute top-6 left-6 w-16 h-auto md:w-20",
-        anim: "animate-bounce-slow",
-      },
-      {
-        src: "/imgs/slider/star.png",
-        className: "absolute top-10 right-8 w-8 h-auto md:w-10",
-        anim: "animate-bounce",
-      },
+      { src: "/imgs/slider/balloon.png", className: "absolute top-[50px] left-[60px] w-20 md:w-28", anim: "animate-bounce-slow" },
+      { src: "/imgs/slider/balloon3.png", className: "absolute bottom-[60px] right-[80px] w-16 md:w-20", anim: "animate-bounce" },
+      { src: "/imgs/slider/balloon2.png", className: "absolute top-[120px] left-[200px] w-20 md:w-28", anim: "animate-bounce-slow" },
+      { src: "/imgs/slider/balloon3.png", className: "absolute bottom-[100px] right-[150px] w-16 md:w-20", anim: "animate-bounce" },
     ],
   },
   {
@@ -27,16 +21,10 @@ export const heroSlides = [
     ctaHref: "#",
     bg: "/imgs/slider/slide3.jpg",
     deco: [
-      {
-        src: "/imgs/slider/balloon.png",
-        className: "absolute top-8 right-6 w-16 h-auto md:w-20",
-        anim: "animate-bounce-slow",
-      },
-      {
-        src: "/imgs/slider/star.png",
-        className: "absolute top-12 left-8 w-8 h-auto md:w-10",
-        anim: "animate-bounce",
-      },
+      { src: "/imgs/slider/balloon.png", className: "absolute top-[40px] right-[80px] w-18 md:w-24", anim: "animate-bounce-slow" },
+      { src: "/imgs/slider/balloon3.png", className: "absolute bottom-[50px] left-[70px] w-14 md:w-20", anim: "animate-pulse" },
+      { src: "/imgs/slider/balloon2.png", className: "absolute top-[120px] left-[150px] w-20 md:w-28", anim: "animate-bounce-slow" },
+      { src: "/imgs/slider/balloon3.png", className: "absolute bottom-[90px] right-[100px] w-16 md:w-22", anim: "animate-bounce" },
     ],
   },
   {
@@ -47,16 +35,10 @@ export const heroSlides = [
     ctaHref: "#",
     bg: "/imgs/slider/slide4.jpg",
     deco: [
-      {
-        src: "/imgs/slider/balloon.png",
-        className: "absolute top-8 right-6 w-16 h-auto md:w-20",
-        anim: "animate-bounce-slow",
-      },
-      {
-        src: "/imgs/slider/star.png",
-        className: "absolute top-12 left-8 w-8 h-auto md:w-10",
-        anim: "animate-bounce",
-      },
+      { src: "/imgs/slider/balloon.png", className: "absolute top-[60px] left-[80px] w-20 md:w-28", anim: "animate-bounce-slow" },
+      { src: "/imgs/slider/balloon3.png", className: "absolute bottom-[70px] right-[120px] w-16 md:w-22", anim: "animate-bounce" },
+      { src: "/imgs/slider/balloon2.png", className: "absolute top-[140px] left-[200px] w-20 md:w-28", anim: "animate-bounce-slow" },
+      { src: "/imgs/slider/balloon3.png", className: "absolute bottom-[100px] right-[150px] w-16 md:w-20", anim: "animate-bounce" },
     ],
   },
   {
@@ -67,16 +49,10 @@ export const heroSlides = [
     ctaHref: "#",
     bg: "/imgs/slider/slide2.jpg",
     deco: [
-      {
-        src: "/imgs/slider/balloon.png",
-        className: "absolute top-8 right-6 w-16 h-auto md:w-20",
-        anim: "animate-bounce-slow",
-      },
-      {
-        src: "/imgs/slider/star.png",
-        className: "absolute top-12 left-8 w-8 h-auto md:w-10",
-        anim: "animate-bounce",
-      },
+      { src: "/imgs/slider/balloon.png", className: "absolute top-[70px] left-[100px] w-20 md:w-28", anim: "animate-bounce-slow" },
+      { src: "/imgs/slider/balloon3.png", className: "absolute bottom-[80px] right-[120px] w-16 md:w-22", anim: "animate-bounce" },
+      { src: "/imgs/slider/balloon2.png", className: "absolute top-[150px] left-[250px] w-20 md:w-28", anim: "animate-bounce-slow" },
+      { src: "/imgs/slider/balloon3.png", className: "absolute bottom-[120px] right-[160px] w-16 md:w-20", anim: "animate-bounce" },
     ],
   },
 ];

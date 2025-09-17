@@ -6,6 +6,7 @@ import CartBanner from "@/components/CartBanner";
 import SpecialOffersCarousel from "@/components/SpecialOffersCarousel";
 import BlogList from "@/components/BlogList";
 import SEO from "@/components/SEO";
+import HeroIcons from "@/components/HeroIcons";
 
 
 export default function Home() {
@@ -19,11 +20,13 @@ export default function Home() {
         image="https://www.BabyLife.com/og-image.jpg"
         type="website"
         />
+       
       <Hero />
   <FeaturesList/>
   <ProductsList/>
   <CartBanner/>
   <SpecialOffersCarousel/>
+  
   <BlogList/>
   
     </>
